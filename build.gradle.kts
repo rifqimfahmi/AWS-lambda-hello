@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     kotlin("jvm") version "1.7.10"
     application
+    id("com.github.johnrengelman.shadow") version "7.1.2"
 }
 
 group = "dev.rifqimfahmi"
@@ -15,6 +16,7 @@ repositories {
 dependencies {
     testImplementation(kotlin("test"))
     testImplementation("com.google.truth:truth:1.1.3")
+    implementation("com.amazonaws:aws-lambda-java-core:1.2.1")
 }
 
 tasks.test {
